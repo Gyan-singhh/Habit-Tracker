@@ -183,8 +183,8 @@ export default function HabitTracker() {
                   whileHover={{ y: -2 }}
                   className="bg-white p-4 rounded-xl shadow-sm border border-gray-100 transition-all"
                 >
-                  <h3 className="text-xs font-semibold text-gray-400 mb-1 uppercase tracking-wider">
-                    Today
+                  <h3 className="text-sm font-semibold text-gray-700 mb-1 tracking-wider">
+                    Today's Progress
                   </h3>
                   <div className="text-3xl font-bold text-green-600 mb-2">
                     {calculateCompletion()}%
@@ -216,7 +216,7 @@ export default function HabitTracker() {
                     className="absolute inset-0 bg-orange-100 rounded-xl"
                   />
 
-                  <h3 className="text-xs font-semibold text-gray-400 mb-1 uppercase tracking-wider">
+                  <h3 className="text-sm font-semibold text-gray-700 mb-1 tracking-wider">
                     Current Streak
                   </h3>
                   <div className="flex items-center mt-3">
@@ -337,10 +337,10 @@ export default function HabitTracker() {
               <LineChart
                 data={habits[0]?.weeklyData.map((dayData, index) => ({
                   day: dayData.day,
-                  Water:
+                  "Water Intake":
                     habits.find((h) => h.id === "water")?.weeklyData[index]
                       ?.value || 0,
-                  Sleep:
+                  "Sleep":
                     habits.find((h) => h.id === "sleep")?.weeklyData[index]
                       ?.value || 0,
                   "Screen Time":
@@ -367,7 +367,7 @@ export default function HabitTracker() {
                 />
                 <Line
                   type="monotone"
-                  dataKey="Water"
+                  dataKey="Water Intake"
                   stroke="#10b981"
                   strokeWidth={2}
                 />
