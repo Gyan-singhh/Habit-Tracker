@@ -17,7 +17,7 @@ A simple and responsive habit tracking app built using **Next.js** and **Tailwin
 Clone the project and run it locally:
 
 ```bash
-git clone https://github.com/your-username/habit-tracker.git
+[git clone https://github.com/your-username/habit-tracker.git](https://github.com/Gyan-singhh/Habit-Tracker.git)
 cd habit-tracker
 npm install
 npm run dev
