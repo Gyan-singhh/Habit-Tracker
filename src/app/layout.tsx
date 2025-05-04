@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Habit Tracker",
   description: "A responsive daily habit tracker built with Next.js",
+  icons: {
+    icon: "/logo.png",
+  },
 };
 
 export default function RootLayout({

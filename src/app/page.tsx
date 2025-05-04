@@ -230,7 +230,7 @@ export default function HabitTracker() {
                     >
                       <FaFire className="text-orange-500 text-2xl mr-2" />
                     </motion.div>
-                    <span className="text-3xl font-bold text-orange-500">
+                    <span className="text-3xl mt-1 font-bold text-orange-500">
                       {currentStreak}
                     </span>
                   </div>
