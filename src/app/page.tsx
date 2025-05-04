@@ -21,6 +21,7 @@ import {
   FaMinus,
   FaFire,
 } from "react-icons/fa";
+import Image from "next/image";
 
 type Habit = {
   id: string;
@@ -144,14 +145,18 @@ export default function HabitTracker() {
           >
             <FaChartLine className="mr-2 text-green-500 text-3xl" />
             <span className="bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">
-            Habit-Tracker
+              Habit-Tracker
             </span>
           </motion.h1>
           <div className="h-9 w-9 rounded-full border-2 border-transparent hover:border-indigo-300">
-            <img
+            <Image
               src={userData.avatar}
               alt="User avatar"
-              className="h-full w-full object-cover rounded-full"
+              width={36}
+              height={36}
+              className="rounded-full object-cover"
+              priority={true}
+              unoptimized={true}
             />
           </div>
         </div>
@@ -171,20 +176,19 @@ export default function HabitTracker() {
                   Hello, {userData.name}!
                 </h2>
                 <p className="text-gray-500">
-                  Keep up the good work on your habits
+                  Good habits, good life. Keep it up!
                 </p>
               </div>
             </div>
 
             <div className="w-full md:w-1/3">
               <div className="grid grid-cols-2 gap-4">
-               
                 <motion.div
                   whileHover={{ y: -2 }}
                   className="bg-white p-4 rounded-xl shadow-sm border border-gray-100 transition-all"
                 >
                   <h3 className="text-sm font-semibold text-gray-700 mb-1 tracking-wider">
-                    Today's Progress
+                    Today&apos;s Progress
                   </h3>
                   <div className="text-3xl font-bold text-green-600 mb-2">
                     {calculateCompletion()}%
@@ -320,8 +324,6 @@ export default function HabitTracker() {
           ))}
         </div>
 
-        
-
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -340,7 +342,7 @@ export default function HabitTracker() {
                   "Water Intake":
                     habits.find((h) => h.id === "water")?.weeklyData[index]
                       ?.value || 0,
-                  "Sleep":
+                  Sleep:
                     habits.find((h) => h.id === "sleep")?.weeklyData[index]
                       ?.value || 0,
                   "Screen Time":
